@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Circuit Sanctuary — Electronics Repair | Haleyville, AL</title>
+<meta name="description" content="Electronics repair in Haleyville, Alabama and 50 miles around. Game consoles, sound systems, phones, and general electronics. Spam call blocking and phone customization. Call (205) 435-4958.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%2300513D'/%3E%3Cpath d='M127.6 63.9 A52 52 0 1 1 72.4 63.9' stroke='%233FD99A' stroke-width='17' stroke-linecap='round' fill='none'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#0E1513; --surface:#141F1B; --line:#26302C;
+    --green:#3FD99A; --green-dim:#2FB37E; --purple:#9B5CE6;
+    --ink:#E8EFEB; --muted:#9BA6A2; --tile:#00513D;
+    --wrap:1080px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font:400 17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--green)}
+  .wrap{max-width:var(--wrap); margin:0 auto; padding:0 24px}
+  h1,h2,h3{line-height:1.15; margin:0; letter-spacing:-0.01em}
+
+  /* header */
+  header{border-bottom:1px solid var(--line); position:sticky; top:0; background:rgba(14,21,19,.92); backdrop-filter:blur(8px); z-index:10}
+  .bar{display:flex; align-items:center; gap:14px; padding:14px 0}
+  .bar svg{width:44px; height:44px; flex:none; border-radius:12px; background:var(--tile)}
+  .bar .nm{font-weight:600; font-size:19px; letter-spacing:.2px}
+  .bar .call{margin-left:auto; background:var(--green); color:#06231A; font-weight:700;
+    padding:10px 18px; border-radius:999px; text-decoration:none; white-space:nowrap; font-size:15px}
+  .bar .call:hover{background:#5BE8AF}
+
+  /* hero */
+  .hero{padding:76px 0 64px; border-bottom:1px solid var(--line)}
+  .hero .mark{width:132px;height:132px;border-radius:34px;background:var(--tile);display:flex;
+    align-items:center;justify-content:center;margin-bottom:30px}
+  .hero .mark svg{width:104px;height:104px}
+  .hero h1{font-size:clamp(34px,6vw,54px); font-weight:700; max-width:16ch}
+  .hero h1 em{font-style:normal; color:var(--green)}
+  .hero p.lead{font-size:clamp(17px,2.3vw,21px); color:var(--muted); max-width:56ch; margin:20px 0 0}
+  .cta{display:flex; flex-wrap:wrap; gap:14px; margin-top:32px}
+  .btn{display:inline-block; padding:14px 26px; border-radius:999px; text-decoration:none; font-weight:700; font-size:16px}
+  .btn.p{background:var(--green); color:#06231A}
+  .btn.p:hover{background:#5BE8AF}
+  .btn.s{border:1px solid var(--line); color:var(--ink)}
+  .btn.s:hover{border-color:var(--green); color:var(--green)}
+  .note{margin-top:18px; font-size:14.5px; color:var(--muted)}
+
+  section{padding:64px 0; border-bottom:1px solid var(--line)}
+  .eyebrow{font-size:12.5px; letter-spacing:2.4px; text-transform:uppercase; color:var(--green-dim); font-weight:600; margin-bottom:14px}
+  h2{font-size:clamp(26px,4vw,34px); font-weight:700}
+  .sub{color:var(--muted); margin:14px 0 0; max-width:60ch}
+
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:18px; margin-top:34px}
+  .card{background:var(--surface); border:1px solid var(--line); border-radius:18px; padding:24px}
+  .card h3{font-size:18.5px; font-weight:600; margin-bottom:9px}
+  .card p{margin:0; color:var(--muted); font-size:15.5px; line-height:1.6}
+  .card .ic{width:34px;height:34px;margin-bottom:14px;color:var(--green)}
+  .card .ic svg{width:100%;height:100%}
+
+  ol.steps{counter-reset:s; list-style:none; padding:0; margin:34px 0 0;
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:18px}
+  ol.steps li{counter-increment:s; background:var(--surface); border:1px solid var(--line);
+    border-radius:18px; padding:24px}
+  ol.steps li::before{content:counter(s); display:flex; align-items:center; justify-content:center;
+    width:30px;height:30px;border-radius:50%; background:var(--tile); color:var(--green);
+    font-weight:700; font-size:14px; margin-bottom:13px}
+  ol.steps b{display:block; font-size:17.5px; margin-bottom:7px}
+  ol.steps span{color:var(--muted); font-size:15.5px}
+
+  table.hours{width:100%; border-collapse:collapse; margin-top:26px; max-width:420px}
+  table.hours td{padding:11px 0; border-bottom:1px solid var(--line); font-size:16px}
+  table.hours td:last-child{text-align:right; color:var(--muted)}
+  table.hours tr:last-child td{border-bottom:0}
+
+  .contact{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:34px; align-items:start}
+  .big{font-size:clamp(26px,4.4vw,36px); font-weight:700; color:var(--green); text-decoration:none; display:inline-block; margin-top:6px}
+  .big:hover{color:#5BE8AF}
+  .areas{color:var(--muted); font-size:15.5px; margin-top:10px; line-height:1.75}
+
+  footer{padding:34px 0 46px; color:var(--muted); font-size:14.5px}
+  footer .fl{display:flex; flex-wrap:wrap; gap:10px 22px; align-items:center}
+  footer a{text-decoration:none}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <svg viewBox="0 0 200 200" aria-hidden="true">
+      <g transform="translate(100 100) scale(0.8) translate(-100 -104)">
+        <path d="M127.6 63.9 A52 52 0 1 1 72.4 63.9" stroke="#3FD99A" stroke-width="17" stroke-linecap="round" fill="none"/>
+        <circle cx="127.6" cy="63.9" r="8.5" fill="#9B5CE6"/><circle cx="72.4" cy="63.9" r="8.5" fill="#9B5CE6"/>
+        <g transform="rotate(-36 100 108) translate(100 108) scale(0.9) translate(-100 -108)">
+          <path d="M84 138 C102 146, 118 137, 116 126" stroke="#F4F7F5" stroke-width="18" stroke-linecap="round" fill="none"/>
+          <path d="M116 126 C114 116, 100 113, 92 107" stroke="#F4F7F5" stroke-width="15" stroke-linecap="round" fill="none"/>
+          <path d="M92 107 C84 101, 82 91, 90 84" stroke="#F4F7F5" stroke-width="12" stroke-linecap="round" fill="none"/>
+        </g>
+        <path d="M80.02 95.82 C82.83 83.47, 100.00 88.66, 100 76" stroke="#F4F7F5" stroke-width="10.8" stroke-linecap="round" fill="none"/>
+        <path d="M94.6 76 L94.6 48 L105.4 48 L105.4 76 Z" fill="#F4F7F5"/>
+        <path d="M94.6 48 L100 16 L105.4 48 Z" fill="#F4F7F5"/>
+      </g>
+    </svg>
+    <span class="nm">Circuit Sanctuary</span>
+    <a class="call" href="tel:+12054354958">(205) 435-4958</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="mark">
+      <svg viewBox="0 0 200 200" aria-label="Circuit Sanctuary logo">
+        <path d="M127.6 63.9 A52 52 0 1 1 72.4 63.9" stroke="#3FD99A" stroke-width="17" stroke-linecap="round" fill="none"/>
+        <circle cx="127.6" cy="63.9" r="8.5" fill="#9B5CE6"/><circle cx="72.4" cy="63.9" r="8.5" fill="#9B5CE6"/>
+        <g transform="rotate(-36 100 108) translate(100 108) scale(0.9) translate(-100 -108)">
+          <path d="M84 138 C102 146, 118 137, 116 126" stroke="#F4F7F5" stroke-width="18" stroke-linecap="round" fill="none"/>
+          <path d="M116 126 C114 116, 100 113, 92 107" stroke="#F4F7F5" stroke-width="15" stroke-linecap="round" fill="none"/>
+          <path d="M92 107 C84 101, 82 91, 90 84" stroke="#F4F7F5" stroke-width="12" stroke-linecap="round" fill="none"/>
+        </g>
+        <path d="M80.02 95.82 C82.83 83.47, 100.00 88.66, 100 76" stroke="#F4F7F5" stroke-width="10.8" stroke-linecap="round" fill="none"/>
+        <path d="M94.6 76 L94.6 48 L105.4 48 L105.4 76 Z" fill="#F4F7F5"/>
+        <path d="M94.6 48 L100 16 L105.4 48 Z" fill="#F4F7F5"/>
+      </svg>
+    </div>
+    <h1>Broken electronics, fixed by <em>somebody local</em>.</h1>
+    <p class="lead">Game consoles, sound systems, phones, and most things with a circuit board in them. Based in Haleyville and covering about fifty miles around it.</p>
+    <div class="cta">
+      <a class="btn p" href="tel:+12054354958">Call (205) 435-4958</a>
+      <a class="btn s" href="#services">See what I fix</a>
+    </div>
+    <p class="note">No storefront &mdash; I work out of my own shop, which is why the rates are what they are.</p>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="eyebrow">What I fix</div>
+    <h2>Most of it is repairable</h2>
+    <p class="sub">A lot of what gets thrown out only needs one part or one connection. Bring it by before you replace it &mdash; diagnosis costs you nothing but a phone call.</p>
+
+    <div class="grid">
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="11" rx="4"/><path d="M7 11v3M5.5 12.5h3M16 12h.01M18.5 14h.01"/></svg></div>
+        <h3>Game consoles</h3>
+        <p>Overheating, HDMI ports, disc drives, drift on controllers, fan noise, no-power. Older systems too.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="3"/><circle cx="12" cy="14" r="4"/><circle cx="12" cy="6.5" r="1.2"/></svg></div>
+        <h3>Sound systems</h3>
+        <p>Receivers, amps, speakers, blown channels, crackling inputs, and gear that hums when it shouldn't.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10.5 18.5h3"/></svg></div>
+        <h3>Phones &amp; tablets</h3>
+        <p>Screens, batteries, charge ports, water damage. Plus rooting and customization if you want the thing to actually be yours.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.6l7.5 3v6c0 4.6-3.1 7.9-7.5 9.4C7.6 19.5 4.5 16.2 4.5 11.6v-6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>Spam call blocking</h3>
+        <p>I'll set your phone up so the robocalls stop getting through. Takes about twenty minutes and it sticks.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M10 2.5v3.5M14 2.5v3.5M10 18v3.5M14 18v3.5M2.5 10H6M2.5 14H6M18 10h3.5M18 14h3.5"/></svg></div>
+        <h3>General electronics</h3>
+        <p>TVs, monitors, small appliances, power supplies, odd one-off gear. If it plugs in, ask me.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 01-5.4 5.4L4 17v3h3l5.3-5.3a4 4 0 015.4-5.4z"/><path d="M15.5 8.5l3-3"/></svg></div>
+        <h3>Tweaks &amp; setup</h3>
+        <p>Speeding up a slow machine, cleaning up a phone, getting a system running the way you actually want it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">How it works</div>
+    <h2>No mystery, no surprise bill</h2>
+    <ol class="steps">
+      <li><b>You call</b><span>Tell me what it's doing. Most of the time I can narrow it down over the phone.</span></li>
+      <li><b>I look at it</b><span>You drop it off or I come get it if you're close. I tell you what's wrong and what it'll cost.</span></li>
+      <li><b>You decide</b><span>If it isn't worth fixing, I'll say so. No charge for looking and no pressure either way.</span></li>
+      <li><b>You get it back</b><span>Working, and you know what was wrong with it.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap contact">
+    <div>
+      <div class="eyebrow">Hours</div>
+      <h2>When I'm around</h2>
+      <table class="hours">
+        <tr><td>Monday &ndash; Friday</td><td>7:00 AM &ndash; 6:00 PM</td></tr>
+        <tr><td>Saturday</td><td>7:00 AM &ndash; 6:00 PM</td></tr>
+        <tr><td>Sunday</td><td>Closed</td></tr>
+      </table>
+      <p class="note">Call outside those hours anyway &mdash; if I'm up, I'll answer.</p>
+    </div>
+    <div>
+      <div class="eyebrow">Get in touch</div>
+      <h2>Call or text</h2>
+      <a class="big" href="tel:+12054354958">(205) 435-4958</a>
+      <div class="areas">
+        <strong style="color:var(--ink)">Areas served</strong><br>
+        Haleyville, Winfield, Hamilton, Russellville, Double Springs,
+        Hackleburg, Red Bay, Jasper, Fayette, Vernon &mdash; and most places
+        within about fifty miles.
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap fl">
+    <span>&copy; Circuit Sanctuary &mdash; Haleyville, Alabama</span>
+    <a href="tel:+12054354958">(205) 435-4958</a>
+  </div>
+</footer>
+
+</body>
+</html>
