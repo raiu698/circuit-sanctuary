@@ -1,5 +1,10 @@
 # Circuit Sanctuary — website + profile assets
 
+**Live: <https://raiu698.github.io/circuit-sanctuary/>**
+Repo: <https://github.com/raiu698/circuit-sanctuary>
+
+Any push to `main` republishes the site within a minute or two.
+
 Everything here is self-contained. `index.html` has no external requests at all
 (logo is inline SVG, fonts are system fonts), so it loads instantly and works offline.
 
@@ -45,7 +50,15 @@ Two things to know before relying on it:
 
 To make it survive reboots, run both as systemd user services rather than by hand.
 
-### Option 2 — a free static host (what I'd actually suggest)
+### Putting Cloudflare in front of it
+
+The site is already on GitHub Pages, which is what Cloudflare Pages wants as a
+source. In the Cloudflare dashboard: **Workers & Pages → Create → Pages →
+Connect to Git → pick `circuit-sanctuary`**. Leave the build command empty and
+the output directory as `/`. That gives you a `*.pages.dev` URL and lets you
+attach a custom domain later.
+
+### Option 2 — other free static hosts
 
 Cloudflare Pages, Netlify, or GitHub Pages will host this single file free,
 keep it up 24/7, and let you point a real domain at it later. Drag `index.html`
