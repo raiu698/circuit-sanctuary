@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://raiu698.github.io/circuit-sanctuary/sitemap.xml
