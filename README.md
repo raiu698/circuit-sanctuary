@@ -73,7 +73,7 @@ The file is yours either way; nothing here locks you to a host.
 Open `index.html` in any text editor. Everything a person normally wants to
 change is near the top of `<body>`, in plain text:
 
-- phone number — appears in four places, search for `435-4958`
+- phone number — appears in four places, search for `530-0604`
 - hours — the `<table class="hours">` block
 - services — the six `<div class="card">` blocks
 - towns — the `.areas` block
